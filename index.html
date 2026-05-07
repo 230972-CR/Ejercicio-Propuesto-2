@@ -7,8 +7,42 @@
 </head>
 <body>
   <div id="app">
-    <h1>📒 Agenda de Contactos</h1>
-    <!-- Aquí irá el contenido -->
+
+    <!-- ENCABEZADO -->
+    <header class="header">
+      <h1> Agenda de Contactos</h1>
+      <p class="subtitulo">Gestiona tus contactos fácilmente</p>
+    </header>
+
+    <!-- FORMULARIO AGREGAR -->
+    <section class="seccion-form">
+      <h2>Agregar Nuevo Contacto</h2>
+      <div class="form-grid">
+        <div class="campo">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" placeholder="Ej: Juan Pérez" />
+        </div>
+        <div class="campo">
+          <label for="telefono">Teléfono</label>
+          <input type="tel" id="telefono" placeholder="Ej: 987654321" />
+        </div>
+        <div class="campo campo-ancho">
+          <label for="correo">Correo electrónico</label>
+          <input type="email" id="correo" placeholder="Ej: juan@correo.com" />
+        </div>
+      </div>
+      <button class="btn-agregar" onclick="agregarContacto()">
+        ➕ Agregar Contacto
+      </button>
+      <p id="mensaje-form" class="mensaje-form"></p>
+    </section>
+
+    <!-- LISTA (se llenará luego) -->
+    <section class="seccion-lista" id="seccion-lista" style="display:none;">
+      <h2>Lista de Contactos <span id="badge-contador" class="badge">0</span></h2>
+      <div id="lista-contactos"></div>
+    </section>
+
   </div>
   <script src="script.js"></script>
 </body>

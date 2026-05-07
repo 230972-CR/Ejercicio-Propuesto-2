@@ -1,0 +1,204 @@
+/* ==========================================
+   AGENDA DE CONTACTOS — Estilos Completos
+   ========================================== */
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f2f5;
+  min-height: 100vh;
+  padding: 24px 16px;
+  color: #2d3436;
+}
+
+#app {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ====== HEADER ====== */
+.header {
+  background: linear-gradient(135deg, #2d3436 0%, #636e72 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 16px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+.header h1 { font-size: 2rem; margin-bottom: 8px; }
+.subtitulo  { color: #b2bec3; font-size: 1rem; }
+
+/* ====== SECCIONES ====== */
+.seccion-form,
+.seccion-lista {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
+.seccion-form h2,
+.seccion-lista h2 {
+  font-size: 1.2rem;
+  color: #2d3436;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ====== FORMULARIO ====== */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.campo-ancho { grid-column: 1 / -1; }
+.campo label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #636e72;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+.campo input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  transition: border-color 0.25s, box-shadow 0.25s;
+  outline: none;
+  color: #2d3436;
+}
+.campo input:focus {
+  border-color: #2d3436;
+  box-shadow: 0 0 0 3px rgba(45,52,54,0.1);
+}
+
+/* ====== BOTÓN AGREGAR ====== */
+.btn-agregar {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #2d3436, #636e72);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.2s, transform 0.15s;
+}
+.btn-agregar:hover  { opacity: 0.88; transform: translateY(-2px); }
+.btn-agregar:active { transform: translateY(0); }
+
+/* ====== MENSAJES ====== */
+.mensaje-form {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  min-height: 40px;
+  transition: all 0.3s;
+}
+.mensaje-form.error  { background:#fff0f0; color:#c0392b; border:1px solid #fab1a0; }
+.mensaje-form.exito  { background:#f0fff4; color:#27ae60; border:1px solid #55efc4; }
+
+/* ====== BADGE CONTADOR ====== */
+.badge {
+  background: #2d3436;
+  color: white;
+  border-radius: 20px;
+  padding: 2px 10px;
+  font-size: 0.8rem;
+}
+
+/* ====== TARJETAS DE CONTACTO ====== */
+.contacto-card {
+  display: grid;
+  grid-template-columns: 48px 1fr auto;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  border: 2px solid #f0f2f5;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.contacto-card:hover {
+  border-color: #b2bec3;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.avatar {
+  width: 48px; height: 48px;
+  background: linear-gradient(135deg, #636e72, #2d3436);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.contacto-info .nombre-contacto {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #2d3436;
+  margin-bottom: 4px;
+}
+.contacto-info .dato {
+  font-size: 0.82rem;
+  color: #636e72;
+  margin-bottom: 2px;
+}
+
+/* ====== BOTÓN ELIMINAR ====== */
+.btn-eliminar {
+  background: #fff5f5;
+  color: #e17055;
+  border: 2px solid #fab1a0;
+  border-radius: 8px;
+  padding: 8px 14px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s, transform 0.15s;
+  white-space: nowrap;
+}
+.btn-eliminar:hover { background: #ffeaea; transform: scale(1.05); }
+
+/* ====== BUSCADOR ====== */
+.buscador-wrap {
+  margin-bottom: 16px;
+}
+.buscador-wrap input {
+  width: 100%;
+  padding: 11px 16px;
+  border: 2px solid #dfe6e9;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.25s;
+}
+.buscador-wrap input:focus { border-color: #2d3436; }
+
+/* ====== ESTADO VACÍO ====== */
+.vacio {
+  text-align: center;
+  padding: 30px 20px;
+  color: #b2bec3;
+}
+.vacio .icono { font-size: 3rem; margin-bottom: 10px; }
+.vacio p { font-size: 0.95rem; }
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 520px) {
+  .form-grid { grid-template-columns: 1fr; }
+  .campo-ancho { grid-column: 1; }
+  .contacto-card { grid-template-columns: 40px 1fr; }
+  .btn-eliminar { grid-column: 1 / -1; width: 100%; }
+}
