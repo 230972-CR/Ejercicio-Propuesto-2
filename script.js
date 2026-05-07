@@ -99,3 +99,25 @@ function renderizarLista() {
       </div>`;
   }).join("");
 }
+function eliminarContacto(id) {
+  let contacto = contactos.find(function(c) { return c.id === id; });
+
+  if (!contacto) return;
+
+  // Animación de salida
+  let card = document.getElementById("card-" + id);
+  if (card) {
+    card.style.transition  = "opacity 0.3s, transform 0.3s";
+    card.style.opacity     = "0";
+    card.style.transform   = "translateX(30px)";
+
+    setTimeout(function() {
+      contactos = contactos.filter(function(c) { return c.id !== id; });
+      renderizarLista();
+      mostrarMensajeForm("🗑️ Contacto \"" + contacto.nombre + "\" eliminado.", "exito");
+    }, 300);
+  } else {
+    contactos = contactos.filter(function(c) { return c.id !== id; });
+    renderizarLista();
+  }
+}
