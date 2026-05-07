@@ -39,7 +39,11 @@
 
     <!-- LISTA (se llenará luego) -->
     <section class="seccion-lista" id="seccion-lista" style="display:none;">
-      <h2>Lista de Contactos <span id="badge-contador" class="badge">0</span></h2>
+      <h2>Lista de Contactos <span id="badge-contador" class="badge">0</span></h2>  
+        <div class="buscador-wrap">
+        <input type="text" id="buscador" placeholder="🔍 Buscar por nombre, teléfono o correo..."
+         oninput="renderizarLista()" />
+        </div>      
       <div id="lista-contactos"></div>
     </section>
 
